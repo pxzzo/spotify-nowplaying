@@ -1,5 +1,23 @@
 # Leitstellen Simulation
 
+Ein browserbasiertes Singleplayer-Webspiel, das den Alltag einer Leitstelle rudimentär simuliert. Enthält Mission-Generator, automatische Fahrzeugdisposition und Fahrzeugbewegung auf Karte.
+
+## Backend
+```bash
+npm install --prefix server
+cp server/.env.example server/.env
+npm start
+```
+
+Für die Entwicklung mit automatischem Neustart:
+```bash
+npm run dev
+```
+
+## Tests
+```bash
+npm test
+=======
 Ein einfaches Demo-Webspiel zur Simulation einer Leitstelle.
 
 ## Backend
@@ -15,6 +33,9 @@ Statische Dateien im Projektwurzelverzeichnis.
 ```
 npx http-server .
 ```
+Nach dem Laden generiert das Spiel zufällige Einsätze. Fahrzeuge werden automatisch mit passenden Fähigkeiten disponiert und bewegen sich zur Einsatzstelle und zurück. Der Spielstand wird im Browser lokal gespeichert.
+=======
+
 
 ## .env
 Siehe `server/.env.example`.

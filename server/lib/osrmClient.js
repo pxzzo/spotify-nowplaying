@@ -14,16 +14,31 @@ function haversine(lat1, lon1, lat2, lon2) {
 
 export async function route(from, to) {
   const url = `${OSRM_URL}/route/v1/driving/${from.lng},${from.lat};${to.lng},${to.lat}?overview=false`;
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5000);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+=======
   try {
     const res = await fetch(url, { timeout: 5000 });
+
     if (!res.ok) throw new Error('osrm');
     const data = await res.json();
     const { distance, duration } = data.routes[0];
     return { distance, duration };
   } catch (e) {
     const distance = haversine(from.lat, from.lng, to.lat, to.lng);
+
+    const speed = 50; // km/h fallback
+    const duration = (distance / 1000) / speed * 3600;
+    return { distance, duration };
+  } finally {
+    clearTimeout(timer);
+=======
     const speed = 50; // km/h
     const duration = (distance / 1000) / speed * 3600;
     return { distance, duration };
+
   }
 }
