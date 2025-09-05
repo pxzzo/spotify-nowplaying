@@ -1,0 +1,10 @@
+{
+  "name": "leitstellen-sim",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "npm --prefix server test",
+    "start": "npm --prefix server start",
+    "dev": "npm --prefix server dev"
+  }
+}
