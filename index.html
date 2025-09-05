@@ -1,100 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <title>Spotify Now Playing</title>
-    <style>
-                body {
-            font-family: 'Montserrat', cursive;
-            margin: 0;
-            padding: 0;
-            -ms-transition: background-color 1000ms ease-in-out;
-            transition: background-color 1000ms ease-in-out;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        
-        #container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 50px;
-        }
-
-        #track-info {
-            font-size: 45px;
-            margin-top: 20px;
-        }
-
-        #album-image {
-            display: block;
-            margin: 20px auto;
-            max-width: 300px;
-            -ms-transition: opacity 1000ms ease-in-out;
-            transition: opacity 1000ms ease-in-out;
-            opacity: 0;
-            border-radius: 15px;
-        }
-
-        #progress-container {
-            background-color: #ddd;
-            height: 10px;
-            width: 90%;
-            margin-top: 20px;
-        }
-
-        #progress-bar {
-            height: 100%;
-            width: 90%;
-            background-color: #fff;
-            transition: width 950ms linear, background-color 1000ms ease-in-out;
-        }
-
-        #time-measurements {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        #current-time,
-        #time-left {
-            flex: 1;
-        }
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-
+<meta charset="UTF-8" />
+<title>Leitstellen-Simulation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" />
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <h1>SPOTIFY NOW PLAYING</h1>
-    <p id="track-info">Loading...</p>
-   
-    <img id="album-image" src="" alt="Album Cover">
-
-    <p id="song-details">Loading...</p>
-
-<!-- Progress bar container -->
-<div id="progress-container">
-    <div id="progress-bar"></div>
-    <div id="time-measurements">
-        <span id="current-time">00:00</span>
-        <span id="time-left">-00:00</span>
-    </div>
-</div>
-
-<!-- Time measurements -->
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
-<script src="/cp.js"></script>
+<body class="dark:bg-gray-800 dark:text-white">
+<div id="app"></div>
+<script type="module" src="main.js"></script>
 </body>
 </html>

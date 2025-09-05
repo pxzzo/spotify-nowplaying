@@ -1,0 +1,14 @@
+{
+  "stations": [
+    {"id":"fw-001","type":"fire","name":"FF Musterstadt","lat":50.83,"lng":12.93},
+    {"id":"rd-001","type":"ems","name":"Rettungswache Stadt","lat":50.84,"lng":12.95}
+  ],
+  "vehicles": [
+    {"id":"fw-hlf1","stationId":"fw-001","org":"fire","kind":"HLF 20","capabilities":["brand","thl"],"speedKmh":85,"lat":50.83,"lng":12.93},
+    {"id":"fw-dlk1","stationId":"fw-001","org":"fire","kind":"DLK 23","capabilities":["leiter"],"speedKmh":80,"lat":50.83,"lng":12.93},
+    {"id":"fw-elw1","stationId":"fw-001","org":"fire","kind":"ELW 1","capabilities":["leitung"],"speedKmh":90,"lat":50.83,"lng":12.93},
+    {"id":"rd-rtw1","stationId":"rd-001","org":"ems","kind":"RTW","capabilities":["patient"],"speedKmh":95,"lat":50.84,"lng":12.95},
+    {"id":"rd-nef1","stationId":"rd-001","org":"ems","kind":"NEF","capabilities":["arzt"],"speedKmh":110,"lat":50.84,"lng":12.95},
+    {"id":"rd-ktw1","stationId":"rd-001","org":"ems","kind":"KTW","capabilities":["transport"],"speedKmh":80,"lat":50.84,"lng":12.95}
+  ]
+}
