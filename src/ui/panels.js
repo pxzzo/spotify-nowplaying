@@ -1,3 +1,4 @@
+
 import { state } from '../data/repository.js';
 import { on } from '../core/eventBus.js';
 
@@ -21,4 +22,7 @@ export function initPanels() {
 
   render();
   on('state:update', render);
+=======
+export function initPanels() {
+  // UI panels placeholder
 }

@@ -17,6 +17,15 @@ npm run dev
 ## Tests
 ```bash
 npm test
+=======
+Ein einfaches Demo-Webspiel zur Simulation einer Leitstelle.
+
+## Backend
+```
+cd server
+npm install
+cp .env.example .env
+npm run start
 ```
 
 ## Frontend
@@ -25,6 +34,8 @@ Statische Dateien im Projektwurzelverzeichnis.
 npx http-server .
 ```
 Nach dem Laden generiert das Spiel zufällige Einsätze. Fahrzeuge werden automatisch mit passenden Fähigkeiten disponiert und bewegen sich zur Einsatzstelle und zurück. Der Spielstand wird im Browser lokal gespeichert.
+=======
+
 
 ## .env
 Siehe `server/.env.example`.

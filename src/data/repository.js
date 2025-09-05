@@ -1,3 +1,4 @@
+
 import { emit } from '../core/eventBus.js';
 
 const STORAGE_KEY = 'leitstelle_state';
@@ -6,11 +7,17 @@ export const state = {
   stations: [],
   vehicles: [],
   missions: []
+=======
+export const state = {
+  stations: [],
+  vehicles: []
+
 };
 
 export function load(data) {
   state.stations = data.stations || [];
   state.vehicles = data.vehicles || [];
+
   state.missions = data.missions || [];
   save();
   emit('state:update');
@@ -46,4 +53,6 @@ export function updateVehicle(vehicle) {
     save();
     emit('state:update');
   }
+=======
+
 }

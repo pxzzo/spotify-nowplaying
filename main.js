@@ -17,3 +17,9 @@ initDispatcher();
 initMissionEngine();
 startClock();
 startNotrufGenerator();
+=======
+
+initTheme();
+initAuth();
+initMap();
+
